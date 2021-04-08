@@ -28,6 +28,7 @@ app.post('/api', (request, response) => {
     response.json(data);
 })
 
+//aplico la resposta consulta de les dades.
 app.get('/api', (request, response) => {
     database.find({},(err, data) => {
        if (err) {

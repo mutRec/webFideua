@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/styles.css" /> 
+    <title>Fideuada 2021</title>
+  </head>
+  <!-- Al carregar la pàgina, refresco contador llista participants -->
+ <body onload=PintaDades()>
+     <div class="grid-contenidor">
+        <div class="zona-titol">
+            Fideuà 2021!
+            <br>
+            Mares i Pares Escola Mireia
+        </div>
+        <!-- Pinto el contador a la zonaContador -->
+        <div class="zona-contador">
+            <p style="color: yellow">Dissabte 29 de Maig a les 13:30</p>
+            <span style="font-size: 22px">Temps que queda pel gran esdeveniment:</span>
+            <br>
+            <span id="contador" style="background-color: yellow;color:black;border-radius: 10px;"></span>
+        </div>
+        <div class="zona-foto">
+            Lloc: <br>
+            Com Arribar-hi: <br>
+        </div>
+        <div class="zona-formulari">
+          <!-- Formulari per enregistrar dades per apuntar-se a la fideuà. -->
+          <form id="form" method="POST">
+            <span style="font-family: Verdana;font-weight: bold;font-size: 24px;color:white;">FORMULARI INSCRIPCIÓ:</span><br><br>
+            <label>Nom de la Família: </label><br><input type="text" size="30" id="nom-familia" placeholder="Entra el nom de la família" autocomplete="on" /><br><br>
+            <label>Número de persones: </label><br><input type="number" min="1" max="5" id="num-membres" maxlength="1" size="1" placeholder="Num" />
+            <br><br>
+            <input class="buto" type="button" id="buto-apuntar"  autocapitalize="on" value="Inscriure'ns-hi!" onclick="RegistreFamilia()"/>
+            <input class="buto" type="reset" id="buto-num-membres" value="Esborra formulari"/>
+          </form>
+        </div>
+        <div class="zona-llista">
+            Llista de famílies inscrites:<br><hr>
+            <ul>
+            <span id="mostra-familia" style="text-align: left;"></span><br>
+            </ul>
+        </div>
+        <div class="zona-peu">Pares i Mares Curs 2020-21 ESCOLA MIREIA de BARCELONA</div>
+     </div>
+     <script src="../js/simplyCountdown.min.js"></script>
+     <script src="../js/code.js"></script>
+   </body>
+</html>

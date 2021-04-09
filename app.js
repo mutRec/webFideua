@@ -1,36 +1,43 @@
-//imports
-const express = require('express');
-const datastore = require('nedb');
+// Importo els móduls que farà servir l'aplicació (web).
+const express = require('express'); // El framework Express.
+const datastore = require('nedb'); // La mini-BBDD Documental (nedb).
 
-//creo l'aplicació (web) utilitzant el framework express.
+// Creo l'aplicació (web) utilitzant el framework express.
 const app = express();
 const port = 3000;
 
+// Creo servidor Http que escoltarà peticions contra el port
+// que hem definit.
+app.listen(port, () => {
+    console.log(`Servidor escoltant en el port ${port}`)
+});
+
+// Creo la BBDD documental i la inicialitzo per el seu ús.
 const database = new datastore('fideua2021.db');
 database.loadDatabase();
 
-//static files.
+// Rutes fitxers.
 app.use(express.static('public'));
 app.use(express.json({limit: '1mb'}));
 app.use('/css', express.static(__dirname + 'public/css'));
 app.use('/js', express.static(__dirname + 'public/js'));
 app.use('/img', express.static(__dirname + 'public/img'));
 
-app.get('', (request, response) => {
+// Faig petició tipus GET, que indica que estic recuperant
+// recursos i que aquests els posarà a la ruta '/'. La callback
+// function serà la (request, response) que li passarem dos paràmetres.
+app.get('/', (request, response) => {
+    // La resposta del servidor/app al entrar, serà la pàgina html
+    // que li enviem.
     response.sendFile(__dirname + '/views/index.html')
 });
 
-//listen on port 3000.
-app.listen(port, () => console.info(`Listening on port ${port}`));
-
-//aplico en base a la resposta del fetch, la inserció permanent a la BBDD nedb (fideua2021.db).
 app.post('/api', (request, response) => {
     const data = request.body;
     database.insert(data);
     response.json(data);
 })
 
-//aplico la resposta consulta de les dades.
 app.get('/api', (request, response) => {
     database.find({},(err, data) => {
        if (err) {
@@ -38,5 +45,6 @@ app.get('/api', (request, response) => {
            return;
        }
        response.json(data);
+       response.end();
     })
 })

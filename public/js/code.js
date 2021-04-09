@@ -43,8 +43,7 @@ function RegistreFamilia() {
                                nomFamilia.value + "<br><span style=font-family:Verdana;font-weight:bold;>Nombre de persones: </span>" + numMembres.value +
                                "<br><hr style=height:15px;color:grey;background-color:grey;border-width:0px;><center><input type=button value=Dacord onclick=window.close();><h5 style=font-family:Verdana;text-align:center;color:grey;>Fideuà 2021 Escola Mireia de Barcelona</h5></center></body>"                        
                                );
-          }
-
+   
    // Capturo les dades del formulari HTML, les inicialitzo en un objecte tipus JSON i ho indico en el fetch.
    const NomFamilia = nomFamilia.value;
    const NumMembres = numMembres.value;
@@ -60,7 +59,8 @@ function RegistreFamilia() {
    
    EsborraFormulari(); // Elimino les dades entrades al formulari (perque quedi net).
    location.reload(); // Refresco la pàgina HTML per reflexar el registre acabat d'entrar (i no haver d'esperar a que es recarregui la pàgina).
-   PintaDades(); // Mostro les dades per pantalla HTML.
+   PintaDades(); // Mostro les dades per pantalla HTML.       
+   }
  }
 
 function EsborraFormulari() {

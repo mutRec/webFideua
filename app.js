@@ -1,6 +1,8 @@
 //imports
 const express = require('express');
 const datastore = require('nedb');
+
+//creo l'aplicació (web) utilitzant el framework express.
 const app = express();
 const port = 3000;
 

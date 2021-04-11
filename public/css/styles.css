@@ -18,7 +18,7 @@
     background-color: black;
     color: yellow;
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Sacramento', cursive;Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .zona-contador {
@@ -27,7 +27,7 @@
     background-color: black;
     color: white;
     font-size: 28px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: sans-serif, Verdana, Geneva, Tahoma;
 }
 
 .zona-foto {
@@ -78,14 +78,28 @@
     text-align: center;
     background-color: black;
     color:gainsboro;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 34px;
+    font-family: 'Sacramento', cursive;Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .buto {
     background-color: black;
     color: white;
-    border: none;
+    border: border: 2px solid;
     font-weight: bold;
+    box-sizing: 24px;
     padding: 5px;
-    font-size: 14px;
+    font-size: 18px;
+    transition-duration: 0.2s;
+    border-radius: 5px;
+    height: 2em;
+}
+
+.buto:hover {
+    background-color: white;
+    color: black;
+}
+
+input {
+    border: 2px solid black;
 }

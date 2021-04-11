@@ -45,6 +45,5 @@ app.get('/api', (request, response) => {
            return;
        }
        response.json(data);
-       response.end();
     })
 })

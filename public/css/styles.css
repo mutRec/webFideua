@@ -73,6 +73,12 @@
     border: 1px solid black; 
 }
 
+.zona-llista span {
+    font-family: 'Grandstander', cursive;Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    text-align: left;
+}
+
 .zona-peu {
     grid-area: zonaPeu;
     text-align: center;

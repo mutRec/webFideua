@@ -34,17 +34,17 @@
           <!-- Formulari per enregistrar dades per apuntar-se a la fideuà. -->
           <form id="form" method="POST">
             <span style="font-family: 'Bungee Shade', cursive;font-weight: bold;font-size: 28px;color:black;">FORMULARI INSCRIPCIÓ:</span><br><br>
-            <label>Nom de la Família: </label><br><input type="text" size="30" id="nom-familia" placeholder="Entra el nom de la família" autocomplete="on" /><br><br>
-            <label>Número de persones: </label><br><input type="number" min="1" max="5" id="num-membres" maxlength="1" size="5" placeholder="0" />
+            <label style="font-family: 'Grandstander', cursive;font-size: 18px;">Nom de la Família: </label><br><input type="text" size="30" id="nom-familia" placeholder="Entra el nom de la família" autocomplete="on" /><br><br>
+            <label style="font-family: 'Grandstander', cursive;font-size: 18px;">Número de persones: </label><br><input type="number" min="1" max="5" id="num-membres" maxlength="1" size="5" placeholder="0" />
             <br><br>
             <input class="buto" type="button" id="buto-apuntar"  autocapitalize="on" value="Inscriure'ns-hi!" onclick="RegistreFamilia()"/>
             <input class="buto" type="reset" id="buto-num-membres" value="Esborra formulari"/>
           </form>
         </div>
         <div class="zona-llista">
-            Llista de famílies inscrites:<br><hr>
+            Llista famílies inscrites:<br><hr>
             <ul>
-            <span id="mostra-familia" style="text-align: left;"></span><br>
+            <span id="mostra-familia"></span><br>
             </ul>
         </div>
         <div class="zona-peu">Curs 2020-21 Escola Mireia</div>

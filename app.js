@@ -10,7 +10,7 @@ app.set('port', 80);
 // Creo servidor Http que escoltarà peticions contra el port
 // que hem definit.
 app.listen(app.get('port'), () => {
-    console.log(`Servidor escoltant en el port ${port}`)
+    console.log('Servidor sobre el port', app.set('port'));
 });
 
 // Creo la BBDD documental i la inicialitzo per el seu ús.

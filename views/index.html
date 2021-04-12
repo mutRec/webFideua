@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet"/> 
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
   </head>
   <!-- Al carregar la pàgina, refresco contador llista participants -->
  <body onload=PintaDades()>
@@ -17,21 +22,20 @@
         </div>
         <!-- Pinto el contador a la zonaContador -->
         <div class="zona-contador">
-            <p style="color: yellow">Dissabte 29 de Maig a les 13:30</p>
+            <p style="color: yellow;font-family: 'Barriecito', cursive;font-size: 54px;">Dissabte 29 de Maig a les 13:30</p>
             <span style="font-size: 22px">Temps que queda pel gran esdeveniment:</span>
             <br>
             <span id="contador" style="background-color: yellow;color:black;border-radius: 5px;padding: 0.05em;"></span>
         </div>
         <div class="zona-foto">
-            Lloc: <br>
-            Com Arribar-hi: <br>
+            Lloc: <br>Hospitalet de l'Infant<br>
         </div>
         <div class="zona-formulari">
           <!-- Formulari per enregistrar dades per apuntar-se a la fideuà. -->
           <form id="form" method="POST">
-            <span style="font-family: Verdana;font-weight: bold;font-size: 24px;color:white;">FORMULARI INSCRIPCIÓ:</span><br><br>
+            <span style="font-family: 'Bungee Shade', cursive;font-weight: bold;font-size: 28px;color:black;">FORMULARI INSCRIPCIÓ:</span><br><br>
             <label>Nom de la Família: </label><br><input type="text" size="30" id="nom-familia" placeholder="Entra el nom de la família" autocomplete="on" /><br><br>
-            <label>Número de persones: </label><br><input type="number" min="1" max="5" id="num-membres" maxlength="1" size="1" placeholder="Num" />
+            <label>Número de persones: </label><br><input type="number" min="1" max="5" id="num-membres" maxlength="1" size="5" placeholder="0" />
             <br><br>
             <input class="buto" type="button" id="buto-apuntar"  autocapitalize="on" value="Inscriure'ns-hi!" onclick="RegistreFamilia()"/>
             <input class="buto" type="reset" id="buto-num-membres" value="Esborra formulari"/>

@@ -4,12 +4,14 @@ const datastore = require('nedb'); // La mini-BBDD Documental (nedb).
 
 // Creo l'aplicació (web) utilitzant el framework express.
 const app = express();
-const port = 3000;
+//const port = 3000;
+app.set('port', 80);
 
 // Creo servidor Http que escoltarà peticions contra el port
 // que hem definit.
-app.listen(port, () => {
-    console.log(`Servidor escoltant en el port ${port}`)
+app.listen(app.get('port'), () => {
+    //console.log(`Servidor escoltant en el port ${port}`)
+    console.log('Servidor escoltant pel port: ', app.get('port'));
 });
 
 // Creo la BBDD documental i la inicialitzo per el seu ús.

@@ -4,7 +4,7 @@ const datastore = require('nedb'); // La mini-BBDD Documental (nedb).
 
 // Creo l'aplicació (web) utilitzant el framework express.
 const app = express();
-const port = 3000;
+const port = 80;
 
 // Creo servidor Http que escoltarà peticions contra el port
 // que hem definit.

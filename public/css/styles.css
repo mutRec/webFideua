@@ -1,26 +1,39 @@
+/* ==================================================================================
+Recordar conceptes: Especificitat, Herència, Cascada, Model de caixa, Floats, etc...
+Veure: DOPODCAST (subscripció YouTube - https://www.youtube.com/watch?v=TBEQ8WuAUYY&list=PLM-Y_YQmMEqCae2LNXpk7S6zCjiZQ3252)
+===================================================================================== */
+/* == ZONA CONTENIDOR =============================================================== */
 .grid-contenidor {
     display: grid;
-    background-color: white;
-    grid-template-areas: 'zonaTitol zonaContador zonaContador'
+    background-color: black;
+    border-radius: 20px;
+    grid-template-areas: 
+    'zonaTitol zonaContador zonaContador'
     'zonaFoto zonaFormulari zonaLlista'
     'zonaPeu zonaPeu zonaPeu';
+    padding: 10px;
 }
 
 .grid-contenidor div {
-    padding: 20px;
-    border: 6px solid white;
+    padding: 10px;
     border-radius: 20px;
+    margin: 5px;
 }
+/* ================================================================================ */
 
+/* == ZONA TITOL ================================================================== */
 .zona-titol {
     grid-area: zonaTitol;
-    font-size: 44px;
+    font-size: 54px;
     background-color: black;
     color: yellow;
     text-align: center;
     font-family: 'Sacramento', cursive;Verdana, Geneva, Tahoma, sans-serif;
+    border: 5px solid yellow;
 }
+/* ================================================================================ */
 
+/* == ZONA CONTADOR =============================================================== */
 .zona-contador {
     grid-area: zonaContador;
     text-align: center;
@@ -28,72 +41,76 @@
     color: white;
     font-size: 28px;
     font-family: sans-serif, Verdana, Geneva, Tahoma;
+    border: 5px solid yellow;
 }
 
+#dataFideua {
+    color: yellow;
+    font-family: 'Barriecito', cursive;
+    font-size: 54px;
+}
+
+#contador {
+    background-color: black;
+    color:lawngreen;
+    padding: 2px;
+    font-family: 'Grandstander', cursive;font-size: 36px;
+}
+/* ================================================================================ */
+
+/* == ZONA FOTO =================================================================== */
 .zona-foto {
     grid-area: zonaFoto;
+    background-color: #222;   
+    border: 5px solid yellow;
+    color: yellow;
     text-align: left;
-    background-color: black;
-    background-image: url("../img/fideua_Mireia_2021.jpg");
-    background-color: yellow;
-    background-blend-mode: luminosity;
-    background-repeat:round;
-    font-family: 'Aclonica', sans-serif;Verdana, Geneva, Tahoma, sans-serif;
-    color:red;
-    font-size: 36px;
-    height: 600px;
+    min-height: 550px;
+    font-family: 'Grandstander', cursive;
+    font-size: 26px;
 }
 
-.zona-data {
-    grid-area: zonaData;
-    font-size: 24px;
-    text-align: left;
-    background-color: black;
-    color: greenyellow;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.zona-foto img {
+    max-width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    display: block;
 }
+/* ================================================================================ */
 
-.zona-missatge {
-    grid-area: zonaMissatge;
-    text-align: left;
-    background-color:grey;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serifk;
-}
-
+/* == ZONA FORMULARI ============================================================= */
 .zona-formulari {
     grid-area: zonaFormulari;
     background-color: gainsboro;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Grandstander', cursive, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    color:black;    
 }
 
-.zona-llista {
-    grid-area: zonaLlista;
-    font-family: 'Grandstander', cursive;Verdana, Geneva, Tahoma, sans-serif;
-    border: 1px solid black; 
+.zona-formulari label {
+    font-family: 'Grandstander', cursive;
+    font-size: 18px;
 }
 
-.zona-llista span {
-    font-family: 'Grandstander', cursive;Verdana, Geneva, Tahoma, sans-serif;
-    text-transform: uppercase;
-    text-align: left;
+#numFamiliesInscrites {
+    font-family: 'Grandstander', cursive;
+    font-size: 24px;
+    font-weight: bolder;
+    color: black;   
 }
 
-.zona-peu {
-    grid-area: zonaPeu;
-    text-align: center;
-    background-color: black;
-    color:gainsboro;
-    font-size: 34px;
-    font-family: 'Sacramento', cursive;Verdana, Geneva, Tahoma, sans-serif;
+#titolFormulariInscripcio {
+    font-family: 'Bungee Shade', cursive;
+    font-weight: bold;
+    font-size: 32px;
+    color:black;
 }
 
 .buto {
     background-color: black;
     color: white;
-    border: border: 2px solid;
+    border: black 2px solid;
     font-weight: bold;
-    box-sizing: 24px;
     padding: 5px;
     font-size: 18px;
     transition-duration: 0.2s;
@@ -105,7 +122,38 @@
     background-color: white;
     color: black;
 }
+/* ================================================================================ */
 
-input {
-    border: 2px solid black;
+/* == ZONA LLISTA ================================================================= */
+.zona-llista {
+    grid-area: zonaLlista;
+    font-family: 'Grandstander', cursive;Verdana, Geneva, Tahoma, sans-serif;
+    border: 5px solid yellow; 
+    color: yellow;
+    background-color: #222;
+    font-size: 18px;
 }
+
+.zona-llista ul {
+    text-transform: uppercase;
+    color: whitesmoke;
+}
+
+.zona-llista hr {
+    height: 3px;
+    border-width:0;
+    background-color:yellow;
+}
+/* ================================================================================ */
+
+/* == ZONA PEU ==================================================================== */
+.zona-peu {
+    grid-area: zonaPeu;
+    text-align: center;
+    background-color: black;
+    color:gainsboro;
+    font-size: 36px;
+    font-family: 'Sacramento', cursive;Verdana, Geneva, Tahoma, sans-serif;
+    border: 5px solid yellow;
+}
+/* ================================================================================ */

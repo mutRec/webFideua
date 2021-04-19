@@ -106,21 +106,29 @@ Veure: DOPODCAST (subscripció YouTube - https://www.youtube.com/watch?v=TBEQ8Wu
     color:black;
 }
 
+.inputForm {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    width: 10em;
+}
+
 .buto {
-    background-color: black;
-    color: white;
-    border: black 2px solid;
-    font-weight: bold;
+    background-color: gainsboro;
+    color: black;
+    border: black 1px solid;
     padding: 5px;
     font-size: 18px;
     transition-duration: 0.2s;
-    border-radius: 5px;
+ /* border-radius: 5px; */
     height: 2em;
 }
 
 .buto:hover {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
 }
 /* ================================================================================ */
 

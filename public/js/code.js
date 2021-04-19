@@ -84,6 +84,6 @@ async function PintaDades() {
        itemList.innerHTML += item.NomFamilia + " (" + item.NumMembres + ")" + "<br>";    
     };
 
-    let numFamiliesInscrites = data.length;
-    itemNumFamiliesInscrites.innerHTML = numFamiliesInscrites;    
+   // let numFamiliesInscrites = data.length;
+   // itemNumFamiliesInscrites.innerHTML = numFamiliesInscrites;    
 };

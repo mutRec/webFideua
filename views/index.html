@@ -37,18 +37,20 @@
         
         <div class="zona-formulari">
           <!-- Formulari per enregistrar dades per apuntar-se a la fideuà. -->
-          <form>
+          <form method="GET">
             <span id="titolFormulariInscripcio">FORMULARI INSCRIPCIÓ:</span><br><br>
-            <label for="nomFamilia">Nom de la Família: </label><br>
-            <input type="text" size="30" id="nomFamilia" placeholder="Entra el nom de la família"/><br><br>
-            <label for="numMembres">Número de persones: </label><br>
-            <input type="number" min="0" max="5" size="5" id="numMembres" placeholder="0"/>
+            <!-- <label for="nomFamilia">Nom de la Família: </label><br> -->
+            <input class="inputForm" type="text" size="30" id="nomFamilia" placeholder="Nom de la família" required/><br><br>
+            <!-- <label for="numMembres">Número de persones: </label><br> -->
+            <input class="inputForm" type="number" min="0" max="5" id="numMembres" placeholder="# Persones" required/>
             <br><br>
             <input class="buto" type="submit" value="Inscriure'ns-hi!" onclick="RegistreFamilia()"/>
             <input class="buto" type="reset" value="Esborra formulari"/>
           </form>
+            <!--
             <br>
             Número de famílies inscrites:<br> <span id="numFamiliesInscrites"></span>
+            -->
         </div>
 
         <div class="zona-llista">
